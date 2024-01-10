@@ -36,11 +36,11 @@ include('seguridad.php');
             </p>
             <section class="menu_central">
                 <img class="logo_randoMovie" src="../media/gif/gif logo_Mesa de trabajo2.gif" alt="gif_logo">
-                <a class="random-button" href="videoplayer/videoplayer.php">
+                <a class="random-button" href="../videoplayer/videoplayer.php">
                     <img class="random_icon" src="../media/img/suffle icon.svg" alt="random_icon">
                     <span class="button-text">Reproducción aleatoria</span>
                 </a>
-                <a id="catalogo-link" href="../catalogo/catalogo.php">o elige de nuestro catálogo</a>
+                <a id="catalogo-link" href="../catalogo/catalogo.php">o elige tu pelicula</a>
             </section>
             <section class="bottom_buttons">
                 <a href="#modalFilter">

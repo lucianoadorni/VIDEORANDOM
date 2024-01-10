@@ -25,7 +25,6 @@
                 <img class="random_icon" src="media/img/suffle icon.svg" alt="random_icon">
                 <span class="button-text">Reproducción aleatoria</span>
             </a>
-            <a id="catalogo-link" href="catalogo/catalogo.php">o elige de nuestro catálogo</a>
         </section>
         <section class="inicio_registro">
             <a class="inicio_sesion" class="button-text" href="login/login.php">Iniciar sesión</a>

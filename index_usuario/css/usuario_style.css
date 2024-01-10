@@ -75,7 +75,8 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1em 2em ;
+    padding: 1em 2em;
+    margin: 1em;
     border-radius: 1em;
     background-color: var(--pr-color-green);
     transition: background-color 0.3s ease;
@@ -292,14 +293,8 @@ a {
 
 #modalFilter > div {
     background: var(--pr-color-purple);
-    /*width: 27em;
-    left: 27%;
-    bottom: -28%;
-
-    */
-    transform: translateX(50%);
-    left: -10vw;
-    bottom: -10%;
+    left: 5%;
+    bottom: -45%;
 }
 
 #modalUser {
@@ -312,9 +307,8 @@ a {
 
 #modalUser > div {
     background-color: var(--pr-color-yellow);
-    transform: translateX(100%);
-    right: -10vw;
-    bottom: -50%;
+    left: 50%;
+    bottom: -60%;
     width: 18em;
 
 }

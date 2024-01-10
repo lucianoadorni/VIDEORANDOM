@@ -25,10 +25,10 @@
                 <i class="fa-solid fa-user"></i>
             </button>
         </a>
-        <button class="random-button">
+        <a class="random-button" href="../videoplayer/videoplayer.php">
             <img class="random_icon" src="media/icon-white.svg" alt="random_icon">
             <span class="button-text">Reproducción aleatoria</span>
-        </button>
+        </a>
     </section>
     <a id="modalFilter" class="modal" href="#close" title="close" class="close">
         <div>

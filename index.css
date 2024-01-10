@@ -75,10 +75,12 @@ button {
     align-items: center;
     justify-content: center;
     padding: 1em 2em ;
+    margin: 1em;
     border-radius: 1em;
     background-color: var(--pr-color-green);
     transition: background-color 0.3s ease;
     color: var(--sc-color-white);
+    text-decoration: none;
 }
   
 .random-button:hover {
