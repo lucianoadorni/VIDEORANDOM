@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+/* variables de css */
+:root {
+    --pr-color-green: rgb(52, 108, 109);
+    --pr-color-darkgreen: rgb(39, 81, 82);
+    --pr-color-yellow: rgb(243, 170, 32);
+    --pr-color-darkyellow: rgb(190, 135, 31);
+    --pr-color-purple: rgb(131, 30, 98);
+    --pr-color-darkpurple: rgb(99, 25, 74);
+    --sc-color-white: rgb(255, 255, 255);
+    --sc-color-black: rgb(0, 0, 0);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    overflow-y: hidden;
+}
+
+html {
+    font-size: 1em;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--sc-color-white);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+h1{
+    color: var(--sc-color-white);
+}
+
+main {
+    height: 100%;
+    width: 100vw;
+    margin-bottom: 0;
+}
+
+/* menu central  */
+
+.menu_central {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3;
+    position: absolute;
+    padding-top: 20em;
+    top: 0;
+    background-color: hsla(0, 100%, 0%, 0.5);
+    height: 100vh;
+    width: 100%;
+
+}
+
+button {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.random-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 2em ;
+    border-radius: 1em;
+    background-color: var(--pr-color-green);
+    transition: background-color 0.3s ease;
+    color: var(--sc-color-white);
+}
+  
+.random-button:hover {
+    background-color: var(--pr-color-darkgreen);
+}
+  
+.button-text {
+    font-size: 1.2em;
+}
+
+.logo_randoMovie {
+    width: 50%;
+    margin-bottom: 1em;
+}
+
+.random_icon {
+    max-width: 2em;
+    margin-right: 1em;
+}
+
+.menu_central p {
+    font-size: 0.85em;
+    margin-top: 1em;
+    color: var(--pr-color-yellow);
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+.menu_central p:hover {
+    font-size: 0.9em;
+}
+
+#catalogo-link {
+    color: var(--pr-color-yellow);
+}
+
+#catalogo-link:visited {
+    color: var(--pr-color-yellow);
+}
+
+/* botones de registro e inicio de sesión  */
+
+.inicio_registro {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50vw;
+    bottom: 3%;
+
+    z-index: 4;
+}
+
+.inicio_sesion, .registro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em 1em;
+    border-radius: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.inicio_sesion {
+    border: 0.2em solid var(--sc-color-white);
+    color: var(--sc-color-white);
+    margin-right: 2em;
+}
+
+.inicio_sesion:hover {
+    background-color: var(--pr-color-purple);
+    color: var(--sc-color-white);
+    border: 0.2em solid rgba(0, 0, 0, 0);
+}
+
+.registro {
+    background-color: var(--pr-color-yellow);
+    color: var(--sc-color-white);
+}
+
+.registro:hover {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0.2em solid var(--pr-color-yellow);
+    color: var(--pr-color-yellow);
+}
+
+.video_fondo {
+    width: auto;
+    height: 100vh;
+    z-index: 2;
+}
+
+.video_fondo video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 1500px) {
+
+    .random_icon {
+        max-width: 1.5em;
+        margin-right: 1em;
+    }
+
+    .random-button {
+        padding: 0.5em 1em;
+    }
+
+    .logo_randoMovie {
+        width: 70%;
+    }
+
+    .menu_central {
+        padding-top: 15em;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .menu_central {
+        padding-top: 15em;
+    }
+    .logo_randoMovie {
+        width: 80%;
+    }
+    .menu_central p {
+        font-size: 0.7em;
+    }
+    .menu_central p:hover {
+        font-size: 0.8em;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .inicio_sesion {
+        margin-right: 0;
+        margin-bottom: 1em;
+    }
+    .inicio_registro {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .logo_randoMovie {
+        width: 85%;
+    }
+    .button-text {
+        font-size: 1em;
+    }
+    .random-button {
+        padding: 0.5em 0.8em;
+    }
+    .menu_central {
+        padding-top: 23em;
+    }
+    .menu_central p:hover {
+        font-size: 0.75em;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    .menu_central {
+        padding-top: 17em;
+    }
+    .inicio_sesion, .registro {
+        padding: 0.2em 0.5em;
+    }
+}

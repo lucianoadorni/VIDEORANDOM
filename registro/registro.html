@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+        <!-- METADATOS -->
+        <meta charset="UTF-8">
+        <meta name="author" content="grupo-web">
+        <meta name="description" content="registrer-randomovie">
+        <link href="css/registro.css" rel="stylesheet" type="text/css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>randoMovie - Registro</title>
+        <!-- ICONOS y FONTS -->
+        <script src="https://kit.fontawesome.com/594c445afa.js" crossorigin="anonymous"></script>
+        <link rel="icon" href="img/suffle icon navegador.svg" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/c3fd22b8e3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="formulario">
+    <div class="wrapper">
+        <div class="form-box registrar">
+              <img src="img/logo3.png">
+              <h2>Registro de Usuario</h2>
+              <form onSubmit="return validate()" action="registro.php" method="post">
+                  <div class="input-box">
+                      <span class="icon"><i class="fa-solid fa-user"></i></span>
+                      <input type="text" placeholder="Nombre" id="name" name="name" required>
+                      <label for="name">Nombre Completo</label>
+                  </div>
+                  <div class="input-box">
+                    <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                    <input placeholder="Email" type="email" id="email" name="id" required>
+                    <label for="id">Email</label>
+                </div>
+                <p id="oculto" class="error">Las contraseñas no coinciden</p>
+                <div class="input-box">
+                    <span class="icon-2" onclick={handdlerPassword()}><i class="fa-regular fa-eye"></i></span>
+                    <input type="password" placeholder="Contraseña" name="pass1" id="txtPassword" required>
+                    <label for="pass1">Contraseña</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon-2" onclick={handdlerPassword2()}><i class="fa-regular fa-eye"></i></span>
+                    <input type="password" placeholder="Contraseña" name="pass2" id="txtPassword2" required>
+                    <label for="pass2">Confirmación de la Contraseña</label>
+                </div>
+                <div class="recordar-olvidar">
+                    <label>Estoy de acuerdo con los Términos y Condiciones de RandoMovie. <input type="checkbox" class="checkbox"></label>
+                </div>
+                <button type="submit" class="btn">Registrarse</button>
+                <div class="login-registrar">
+                    <p>¿Tienes cuenta? <a href="../login/login.php" class="registrar-link">Inicia Sesión</a></p>
+                </div>
+              </form>
+         </div>
+      </div>
+    </div>
+    <!-- JS NATIVO -->
+    <script src="js/registro.js"></script>
+</body>
+</html>

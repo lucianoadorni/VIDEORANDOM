@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* BODY / FONDO */
+
+body {
+    background-image: url(../img/1704372010382-aff99df8-ed81-438b-bc63-55cdca01c5a0_1.jpg); 
+    background-size: 100%;
+    /* background-position: center; */
+    background-repeat: repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* VARIABLES CSS */
+
+:root {
+    --pr-color-green: rgb(52, 108, 109);
+    --pr-color-darkgreen: rgb(39, 81, 82);
+    --pr-color-yellow: rgb(243, 170, 32);
+    --pr-color-darkyellow: rgb(190, 135, 31);
+    --pr-color-purple: rgb(131, 30, 98);
+    --pr-color-darkpurple: rgb(99, 25, 74);
+    --sc-color-white: rgb(255, 255, 255);
+    --sc-color-black: rgb(0, 0, 0);
+}
+
+/* FORMULARIO */
+
+#formulario {
+    position: absolute;
+    top: 25%;
+}
+
+.wrapper {
+    width: 50em;
+    height: 35em;
+    background-color: var(--pr-color-green);
+    border-radius: 20px;
+    box-shadow: 0 0 30px black;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    padding: 2em;
+}
+
+.wrapper .form-box {
+    width: 100%;
+    padding: 5%;
+}
+
+.form-box img {
+    width: 73%;
+    margin: 0 auto;
+    display: block;
+    padding: 1em;
+}
+
+.form-box h2 {
+    font-size: 2em;
+    color: var(--sc-color-white);
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid var(--sc-color-white);
+    margin: 30px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: var(--sc-color-white);
+    font-size: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label, 
+.input-box input:valid~label {
+    top: -5px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: var(--sc-color-white);
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: var(--sc-color-white);
+    line-height: 57px;
+}
+
+.input-box .icon-2 {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: rgb(186 186 186);
+    line-height: 57px;
+}
+
+.input-box .icon-2:hover {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: var(--sc-color-white);
+    line-height: 57px;
+    transition: 0.4s all ease;
+}
+
+.recordar-olvidar {
+    font-size: .9em;
+    color: var(--sc-color-white);
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.recordar-olvidar input {
+    accent-color: var(--pr-color-yellow);
+}
+
+.recordar-olvidar a {
+    color: var(--sc-color-white);
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.recordar-olvidar a:hover {
+    text-decoration: underline;
+    transition: all 0.4s ease;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: var(--pr-color-darkyellow);
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    color: var(--pr-color-darkgreen);
+    font-weight: bold;
+}
+
+.btn:hover {
+    width: 100%;
+    height: 45px;
+    background: var(--pr-color-yellow);
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    color: var(--pr-color-darkgreen);
+    font-weight: bold;
+    transition: 0.4s all ease;
+}
+
+.login-registrar p {
+    color: var(--sc-color-white);
+    padding-top: 1em;
+    font-size: 14px;
+    text-align: center;
+}
+
+.login-registrar a {
+    color: var(--sc-color-white);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-registrar a:hover {
+    text-decoration: underline;
+    transition: all 0.4s ease;
+}
+
+p.error {
+    background-color: darkred;
+    color: white;
+    padding: 2em;
+    border-radius: 15px;
+}
+/* MEDIA QUERIES REGISTRO */
+
+@media (max-width:900px) {
+    .wrapper {
+        width: 42em;
+    }
+
+    .form-box img {
+        width: 71%;
+    } 
+}
+
+@media (max-width:800px) {
+    .wrapper {
+        width: 38em;
+    }
+
+    .form-box img {
+        width: 70%;
+    } 
+}
+
+@media (max-width:700px) {
+    .wrapper {
+        width: 35em;
+    }
+
+    .form-box img {
+        width: 69%;
+    } 
+}
+
+@media (max-width:650px) {
+    .wrapper {
+        width: 31em;
+    }
+
+    .form-box img {
+        width: 66%;
+    } 
+}
+
+@media (max-width:590px) {
+    .wrapper {
+        width: 28em;
+    }
+
+    .form-box img {
+        width: 65%;
+    } 
+}
+
+@media (max-width:530px) {
+    .wrapper {
+        width: 26em;
+    }
+
+    .input-box label {
+        font-size: 0.9em;
+    }
+
+    .form-box img {
+        width: 61%;
+    } 
+}
+
+@media (max-width:465px) {
+    .wrapper {
+        width: 23em;
+    }
+
+    .input-box label {
+        font-size: 0.75em;
+    }
+
+    .form-box img {
+        width: 60%;
+    }
+
+    .recordar-olvidar {
+        font-size: 0.7em;
+    }
+
+    .recordar-olvidar a {
+        font-size: 11px;
+    }
+}

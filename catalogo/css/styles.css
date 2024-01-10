@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+:root {
+    --pr-color-green: rgb(52, 108, 109);
+    --pr-color-darkgreen: rgb(39, 81, 82);
+    --pr-color-yellow: rgb(243, 170, 32);
+    --pr-color-darkyellow: rgb(190, 135, 31);
+    --pr-color-purple: rgb(131, 30, 98);
+    --pr-color-darkpurple: rgb(99, 25, 74);
+    --sc-color-white: rgb(255, 255, 255);
+    --sc-color-black: rgb(0, 0, 0);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--pr-color-darkpurple);
+}
+
+#logo {
+    display: block;
+    margin: 5em auto;
+    width: 50%;
+}
+
+/* .recomendados {
+    margin: 2em 0em 2em 2em;
+} */
+
+h2 {
+    margin: 2em 1em;
+    font-size: 1.2em;
+    font-weight: 400;
+    color: var(--sc-color-white);
+}
+
+/* SWIPER */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    width: 100%;
+}
+
+.swiper-slide img {
+    border-radius: 15px;
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* BOTONES */
+.bottom_buttons {     
+    display: flex;     
+    align-items: center;     
+    position: fixed;     
+    transform: translateX(-50%);     
+    left: 50vw;     
+    bottom: 3%;      
+    z-index: 20;  
+}  
+
+.filter, .user {     
+    display: flex;     
+    align-items: center;     
+    justify-content: center;     
+    padding: 1em 1em;     
+    border-radius: 1em;     
+    transition: 0.3s ease;          
+    font-size: 1.3em; 
+}  
+
+.filter {     
+    background-color: var(--pr-color-purple);     
+    border: 0.2em solid var(--pr-color-purple);     
+    color: var(--sc-color-white);     
+    margin-right: 1em; 
+}  
+
+.filter:hover {     
+    background-color: var(--pr-color-darkpurple);     
+    border: 0.2em solid var(--pr-color-purple);     
+    color: var(--sc-color-white); 
+}  
+
+.user {     
+    background-color: var(--pr-color-yellow);     
+    border: 0.2em solid var(--pr-color-yellow);     
+    color: var(--sc-color-white);
+    margin-right: 1em; 
+}  
+
+.user:hover {     
+    background-color: var(--pr-color-darkyellow);     
+    border: 0.2em solid var(--pr-color-yellow); 
+}  
+
+a {     
+    text-decoration: none;     
+    color: var(--sc-color-white);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 21;
+    opacity:0;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+    padding: 5em;
+    top: 100%;
+    width: 100%;
+}
+
+.modal:target {
+    opacity:1;
+    pointer-events: auto;
+}
+
+.modal > div {
+    width: 45%;
+    position: relative;
+    bottom: -4.3em;
+    padding: 2em;
+    border-radius: 10px;
+    transition: opacity 400ms ease-in;
+    z-index: 22;
+
+    overflow-x: hidden;
+    color: var(--sc-color-white);
+
+}
+
+.close {
+    background: #606061;
+    color: var(--sc-color-white);
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 12px;
+    box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover { 
+    background: var(--sc-color-black); 
+}
+
+#edad, #generos, #duracion {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1em;
+    flex-wrap: wrap;
+}
+
+.modal h3 {
+    margin-bottom: 1em;
+    border-bottom: solid 1px var(--sc-color-white);
+    font-weight: normal;
+}
+
+#edad li, #generos li, #duracion li  {
+    padding: 0.5em;
+    background-color: var(--sc-color-white);
+    color: var(--pr-color-purple);
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+    border-radius: 2em;
+    border: solid 2px var(--sc-color-white);
+}
+
+#edad li:hover, #generos li:hover, #duracion li:hover  {
+    background-color: var(--pr-color-darkpurple);
+    color: var(--sc-color-white);
+    text-decoration: none;
+}
+
+#modalFilter {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#modalFilter > div {
+    background: var(--pr-color-purple);
+    transform: translateX(50%);
+    left: -10vw;
+    bottom: -10%;
+}
+
+#modalUser {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#modalUser > div {
+    background-color: var(--pr-color-yellow);
+    transform: translateX(100%);
+    right: -10vw;
+    bottom: -50%;
+    width: 18em;
+
+}
+
+#cuenta li {
+    margin-bottom: 0.8em;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.logout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 1em;
+    border-radius: 1em;
+    transition: 0.3s ease;
+    background-color: var(--sc-color-white);
+    color: var(--pr-color-yellow);
+    margin-top: 1em;
+}
+
+button.logout:hover {
+    background-color: var(--pr-color-green);
+    color: var(--sc-color-white);
+}
+
+button {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.random-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 2em ;
+    border-radius: 1em;
+    background-color: var(--pr-color-green);
+    transition: background-color 0.3s ease;
+    color: var(--sc-color-white);
+    font-size: 1em; 
+}
+
+.random-button:hover {
+    background-color: var(--pr-color-darkgreen);
+}
+
+img.random_icon {
+    width: 10%;
+}
+
+.button-text {
+    font-size: 1em;
+}
+
+@media only screen and (max-width: 1600px) {
+    .random_icon {
+        max-width: 1.5em;
+        margin-right: 1em;
+    }
+
+    .random-button {
+        padding: 0.5em 1em;
+    }
+
+    .logo_randoMovie {
+        width: 70%;
+    }
+
+    .menu_central {
+        padding-top: 15em;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .random_icon {
+        max-width: 1.5em;
+        margin-right: 1em;
+    }
+
+    .random-button {
+        padding: 0.5em 1em;
+    }
+
+    .logo_randoMovie {
+        width: 70%;
+    }
+
+    .menu_central {
+        padding-top: 15em;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .menu_central {
+        padding-top: 22em;
+    }
+
+    .menu_central {
+        padding-top: 20%;
+    }
+
+
+    .logo_randoMovie {
+        width: 80%;
+    }
+    .menu_central p {
+        font-size: 0.7em;
+    }
+
+
+    #modalFilter > div {
+        width: 25em;
+    }
+
+    #modalUser > div {
+        transform: translateX(100%);
+        bottom: -47%;
+        width: 18em;
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+
+    .menu_central {
+        padding-top: 25%;
+    }
+
+    #modalFilter > div {
+        width: 25em;
+    }
+
+    #modalUser > div {
+        background-color: var(--pr-color-yellow);
+        transform: translateX(100%);
+        right: -10vw;
+        bottom: -50%;
+        width: 18em;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+
+    .menu_central {
+        padding-top: 40%;
+    }
+#modalFilter > div {
+        transform: translateX(-100%);
+        left: 55vw;
+        bottom: -13%;
+    }
+
+    #modalUser > div {
+        background-color: var(--pr-color-yellow);
+        transform: translateX(100%);
+        right: 0vw;
+        bottom: -50%;
+        width: 18em;
+    }
+}
+
+
+@media only screen and (max-width: 709px) {
+    #modalFilter {
+        padding: 0;
+    }
+
+    #modalFilter > div {
+        transform: translateX(-100%);
+        left: 70vw;
+        bottom: -13%;
+        width: 60%;
+    }
+
+    #modalUser > div {
+        background-color: var(--pr-color-yellow);
+        transform: translateX(50%);
+        right: 0vw;
+        bottom: -50%;
+        width: 18em;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .inicio_sesion {
+        margin-right: 0;
+        margin-bottom: 1em;
+    }
+
+    .inicio_registro {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #modalFilter {
+        padding: 0;
+    }
+
+    #modalFilter > div {
+        position: absolute;
+        transform: translateX(-50%);
+        left: 50vw;
+        bottom: 15%;
+        width: 24em;
+    }
+
+    #modalUser > div {
+        position: absolute;
+        transform: translateX(-50%);
+        left: 50vw;
+        bottom: 15%;
+        width: 18em;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .logo_randoMovie {
+        width: 85%;
+    }
+
+    .button-text {
+        font-size: 1em;
+    }
+
+    .random-button {
+        padding: 0.5em 0.8em;
+    }
+
+    .menu_central {
+        padding-top: 15em;
+    }
+
+    #modalFilter > div {
+        width: 75%;
+    }
+
+    #modalFilter h3 {
+        margin-bottom: 0.5em;
+    }
+
+    #modalFilter ul {
+        margin-bottom: 0.5em;
+    }
+
+    #modalFilter ul li {
+        font-size: 0.85em;
+    }
+}

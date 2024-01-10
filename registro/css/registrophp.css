@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* BODY / FONDO */
+
+body {
+    background-image: url(../img/1704372010382-aff99df8-ed81-438b-bc63-55cdca01c5a0_1.jpg); 
+    background-size: 100%;
+    background-repeat: repeat;
+}
+
+/* VARIABLES CSS */
+
+:root {
+    --pr-color-green: rgb(52, 108, 109);
+    --pr-color-darkgreen: rgb(39, 81, 82);
+    --pr-color-yellow: rgb(243, 170, 32);
+    --pr-color-darkyellow: rgb(190, 135, 31);
+    --pr-color-purple: rgb(131, 30, 98);
+    --pr-color-darkpurple: rgb(99, 25, 74);
+    --sc-color-white: rgb(255, 255, 255);
+    --sc-color-black: rgb(0, 0, 0);
+}
+
+/* PAGINA REGSITRO MENSAJE */
+.regsistrophp {
+    background-color: var(--pr-color-darkgreen);
+    color: white;
+    padding: 2em;
+    margin: 1em;
+    border-radius: 15px;
+}
+
+#regsistroh1 {
+    background-color: var(--pr-color-darkgreen);
+    color: white;
+    padding: 2em;
+    margin: 1em;
+    border-radius: 15px;
+}
+
+a, a:visited {
+    color: var(--pr-color-yellow);
+}
